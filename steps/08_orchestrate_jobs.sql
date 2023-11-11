@@ -52,6 +52,7 @@ EXECUTE TASK ORDERS_UPDATE_TASK;
 
 
 -- Alternatively, here are some manual queries to get at the same details
+
 SHOW TASKS;
 
 -- Task execution history in the past day
@@ -73,6 +74,7 @@ WHERE STATE = 'SCHEDULED'
 ORDER BY COMPLETED_TIME DESC;
 
 -- Other task-related metadata queries
+
 SELECT *
   FROM TABLE(INFORMATION_SCHEMA.CURRENT_TASK_GRAPHS())
   ORDER BY SCHEDULED_TIME;
