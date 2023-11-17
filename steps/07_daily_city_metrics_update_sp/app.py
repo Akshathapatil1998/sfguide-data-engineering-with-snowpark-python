@@ -79,7 +79,7 @@ def merge_daily_city_metrics(session):
                         "AVG_TEMPERATURE_FAHRENHEIT", "AVG_TEMPERATURE_CELSIUS", \
                         "AVG_PRECIPITATION_INCHES", "AVG_PRECIPITATION_MILLIMETERS", \
                         "MAX_WIND_SPEED_100M_MPH")
-#    daily_city_metrics_stg.limit(5).show()
+    # daily_city_metrics_stg.limit(5).show()
 
     cols_to_update = {c: daily_city_metrics_stg[c] for c in daily_city_metrics_stg.schema.names}
     metadata_col_to_update = {"META_UPDATED_AT": F.current_timestamp()}
